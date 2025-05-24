@@ -1,0 +1,17 @@
+.background {
+    background-image: url('../../public/img/pronew.jpg'); /* public/your-image.jpg */
+    background-size: cover;
+    background-position: top;
+}
+.backgroundText {
+    background-image: url('../../public/img/Vector 658.png');
+    background-size:cover ;
+    background-position: top;
+
+}
+.backgroundText2 {
+    background-image: url('../../public/img/pronew2.jpg');
+    background-size:cover ;
+    background-position: top;
+
+}
