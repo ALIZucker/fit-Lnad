@@ -54,7 +54,10 @@ function HeaderDesktop() {
 
 
     }, [isHovered])
+
     React.useEffect(() => {
+        console.log(session?.accessTextExpires,"--------------------------")
+
         if (session?.accessTextExpires === "TokenExpired") {
             console.warn("توکن منقضی شده است، خروج از سیستم...");
             handleLogout(session)

@@ -64,7 +64,6 @@ export const authOptions = {
                 token.role = user.role;
                 token.name = user.name;
                 token.accessTokenExpires = Date.now() + 60 * 60 * 1000;
-                console.log(token.accessTokenExpires);
                 console.log(Date.now());
             }
             if (!token.accessTokenExpires || Date.now() < token.accessTokenExpires) {
@@ -76,10 +75,12 @@ export const authOptions = {
             return token;
         },
         async session({session, token}: { session: Session, token: JWT }) {
-            console.log(token);
+            console.log(token.accessTokenExpires,"********************");
+            console.log(Date.now());
+
             session.accessToken = token.accessToken as string;
             session.name = token.name as string;
-            console.log(session);
+            session.accessTextExpires = token.accessTextExpires as string;
             return session;
         }
     },
