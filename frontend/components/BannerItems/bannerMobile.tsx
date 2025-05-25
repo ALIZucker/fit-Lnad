@@ -18,29 +18,29 @@ function BannerMobile() {
                 <p className="text-gray-600 text-[10px] lg:text-desktext16 font-semibold">بزرگترین حراج فصل فیت لند همین حالا شروع کن و
                     محصولات با یه تخفیف انگیز بخر!</p>
                 <div className="lg:w-[11vw] lg:h-12 mt-2 w-[40.09vw] h-8 bg-secondery text-white flex flex-row gap-2 items-center justify-center rounded-xl">
-                    <Image src={arraw} alt={`image`}/>
+                    <img src={arraw.src} alt={`image`} />
                     <p className="text-xs lg:text-desktext16 font-bold">مشاهده محصولات</p>
                 </div>
 
             </div>
             <div className="flex flex-row gap-[5.66vw] justify-center w-[40%]  items-center ">
-                <Image src={img2} alt={`image`} className="lg:w-[422px] lg:h-[49.68vh] w-[34.40vw] h-[17.74vh] mt-6"/>
+                <img src={img2.src} alt={`image`} className="lg:w-[422px] lg:h-[49.68vh] w-[34.40vw] h-[17.74vh] mt-6"/>
                 <div className="lg:flex flex-col gap-4 hidden py-3">
                     <section className="flex flex-row gap-4 w-[12vw] items-center">
-                        <Image src={store} alt={`image`} className="w-20 h-20"/>
+                        <img src={store.src} alt={`image`} className="w-20 h-20"/>
                         <p className="text-gray40 font-semibold text-desktext16 ">+ ۳۰۰ محصولات متنوع</p>
                     </section>
                     <section className="flex flex-row gap-4 w-[12vw] items-center">
-                        <Image src={like} alt={`image`} className="w-20 h-20"/>
+                        <img src={like.src} alt={`image`} className="w-20 h-20"/>
                         <p className="text-gray40 font-semibold text-desktext16 ">۹۵ % رضایت مشتری</p>
                     </section>
                     <section className="flex flex-row gap-4 w-[12vw] items-center">
-                        <Image src={cal} alt={`image`} className="w-20 h-20"/>
+                        <img src={cal.src} alt={`image`} className="w-20 h-20"/>
                         <p className="text-gray40 font-semibold text-desktext16 ">۴ روز از خرید تا دریافت</p>
                     </section>
                 </div>
             </div>
-                <Image src={dots} alt={`image`} className="absolute bottom-0 z-[-1] hidden w-[80%]  lg:block"/>
+                <img src={dots.src} alt={`image`} className="absolute bottom-0 z-[-1] hidden w-[80%]  lg:block"/>
         </div>
     );
 }

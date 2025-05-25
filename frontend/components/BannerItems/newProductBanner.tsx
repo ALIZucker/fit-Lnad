@@ -28,7 +28,7 @@ function NewProductBanner({textFirst,descriptionFirst,imageFirst,imageSecend,tex
                 <p className="text-desktext16 text-gray50">{descriptionSecondary}</p>
                 <div
                     className="lg:w-[16.27vw] lg:h-12 mt-2 w-[40.09vw] h-8 bg-primary text-white flex flex-row gap-4 items-center justify-center rounded-xl">
-                    <Image src={arraw} alt={`image`}/>
+                    <img src={arraw.src} alt={`image`}/>
                     <p className="text-xs lg:text-desktext16 font-bold">مشاهده محصولات</p>
                 </div>
             </div>
