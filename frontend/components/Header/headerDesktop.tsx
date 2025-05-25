@@ -1,14 +1,10 @@
 'use client'
 import React, {ChangeEvent} from 'react';
 import Image from 'next/image';
-import img from '@/public/icon/Frame 1430103224.png'
-import img3 from "@/public/icon/search-normal.png";
-import img4 from "@/public/icon/bag-2.png";
-import img5 from "@/public/icon/award.png";
+
 import img6 from "@/public/icon/star.png";
 import img7 from "@/public/icon/flash.png";
 import {useRouter} from "next/navigation";
-import woman from "@/public/img/image 9.png"
 import man from "@/public/img/image 11.png"
 import lavazem from "@/public/img/image 13.png"
 import child from "@/public/img/image 10.png"
@@ -40,7 +36,7 @@ function HeaderDesktop() {
                 setImage(man.src)
                 break;
             case "زنانه":
-                setImage(woman.src)
+                setImage("/img/image 9.png")
                 break;
             case "بچگانه":
                 setImage(child.src)
@@ -81,10 +77,10 @@ function HeaderDesktop() {
     return (
         <>
             <section className="flex flex-row justify-around gap-[10.24vw] ">
-                <Image src={img} alt={`image`}/>
+                <Image src="/icon/Frame 1430103224.png" alt={`image`} width={150} height={50} />
                 <section className="relative  w-[33.49vw] py-2 flex flex-col ">
                     <div className="flex flex-row items-center px-2 py-3 w-full gap-2 bg-gray-100  rounded-xl">
-                        <Image src={img3} alt={`image`} className={`w-[24px] h-[24px]`}/>
+                        <Image src="/icon/search-normal.png" alt={`image`} width={24} height={24}/>
                         <input placeholder={`جست و جو`} className="bg-transparent text-sm w-full outline-none"
                                onFocus={() => setShowResults(!showResults)}
                                onBlur={() => setShowResults(!showResults)}
@@ -158,7 +154,7 @@ function HeaderDesktop() {
                     }
 
                     <div className="bg-primary w-[48px] rounded-xl h-[48px] flex items-center justify-center  ">
-                        <Image src={img4} alt={`image`}/>
+                        <Image src="/icon/bag-2.png" alt={`image`} width={28} height={28}/>
                     </div>
                 </section>
             </section>
@@ -174,13 +170,13 @@ function HeaderDesktop() {
                     <i className="cursor-pointer " onMouseEnter={() => setIsHovered(4)}>شیکر و جاگ</i>
                 </ol>
                 <ol className="w-[34vw] flex flex-row justify-around  font-semibold text-[14px]">
-                    <i className="flex flex-row gap-1  cursor-pointer"><Image src={img6} alt={`image`}
+                    <i className="flex flex-row gap-1  cursor-pointer"><img src={img6.src} alt={`image`}
                                                                               className={`w-[20px] h-[20px]`}/>
                         جدیدترین محصولات</i>
-                    <i className="flex flex-row gap-1  cursor-pointer"><Image src={img5} alt={`image`}
+                    <i className="flex flex-row gap-1  cursor-pointer"><img src="/icon/award.png" alt={`image`}
                                                                               className={`w-[20px] h-[20px]`}/>تخفیفات
                         ویژه</i>
-                    <i className="flex flex-row gap-1 cursor-pointer "><Image src={img7} alt={`image`}
+                    <i className="flex flex-row gap-1 cursor-pointer "><img src={img7.src} alt={`image`}
                                                                               className={`w-[20px] h-[20px]`}/>پرفروش
                         ترین ها</i>
 
@@ -205,7 +201,7 @@ function HeaderDesktop() {
 
                     }
                     {
-                        image ? <Image src={image} alt={`image`} width={200} height={200}/> : ""
+                        image ? <img src={image} alt={`image`} width={200} height={200}/> : ""
                     }
 
                 </div>
