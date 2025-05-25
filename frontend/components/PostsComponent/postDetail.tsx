@@ -15,7 +15,7 @@ interface PostDetailProps {
 function PostDetail({image, title, price, vip, off}: PostDetailProps) {
     return (
         <div className="lg:w-[366px] w-full lg:h-[468px] bg-white flex flex-col justify-start relative rounded-xl">
-            <Image
+            <img
                 src={image}
                 alt="asdasd"
                 className="w-full rounded-xl object-cover object-center"

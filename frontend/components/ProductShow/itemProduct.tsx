@@ -8,7 +8,7 @@ import {dataproduct} from "@/type/next-auth";
 function ItemProduct({item}: { item: dataproduct }) {
     return (
         <div className="lg:w-[18.11vw] lg:h-[53.97vh] relative  flex flex-col gap-4 rounded-2xl shadow-md hover:shadow-xl">
-            <Image src={item.image} alt="image" className="rounded-t-xl" width={400} height={500} />
+            <img src={item.image} alt="image" className="rounded-t-xl" width={400} height={500} />
             <div className="flex flex-col gap-3 px-3 ">
                 {
                     item.off !== null ? (<div
