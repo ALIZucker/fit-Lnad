@@ -80,7 +80,7 @@ function HeaderDesktop() {
     return (
         <>
             <section className="flex flex-row justify-around gap-[10.24vw] ">
-                <Image src="/icon/Frame 1430103224.png" alt={`image`} width={150} height={50} />
+                <Link href={`http://localhost:3000/`}><Image src="/icon/Frame 1430103224.png" alt={`image`} width={150} height={50} /></Link>
                 <section className="relative  w-[33.49vw] py-2 flex flex-col ">
                     <div className="flex flex-row items-center px-2 py-3 w-full gap-2 bg-gray-100  rounded-xl">
                         <Image src="/icon/search-normal.png" alt={`image`} width={24} height={24}/>

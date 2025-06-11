@@ -15,11 +15,11 @@ function Register({ setValue }: registerProps) {
     const [name, setName] = React.useState<string>("");
     const [phoneNumber, setPhoneNumber] = React.useState<string>("");
     const [email, setEmail] = React.useState<string>("");
-
     const handleLogin = async () => {
         const result = await signIn('credentials', {
             email:email,
-            password: phoneNumber,
+            action:"register",
+            phonenumber: phoneNumber,
             name: name,
             redirect: true,
             callbackUrl: '/',
@@ -27,6 +27,7 @@ function Register({ setValue }: registerProps) {
 
         console.log(result);
     };
+
 
     const handleEnter = () => {
         setValue(false)

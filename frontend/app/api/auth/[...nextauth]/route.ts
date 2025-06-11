@@ -1,4 +1,3 @@
-// app/api/auth/[...nextauth]/route.ts
 import NextAuth, {Session, SessionStrategy, User} from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import axios from 'axios';
@@ -10,17 +9,34 @@ export const authOptions = {
         CredentialsProvider({
             name: 'Credentials',
             credentials: {
-                name: {label: "Name", type: "text"},
-                email: {label: "Email", type: "email"},
-                password: {label: "Password", type: "password"},
+                action: {label: "Action", type: "text"}, // login or register
+                name: {label: "Name", type: "text", optional: true},
+                email: {label: "Email", type: "email", optional: true},
+                phonenumber: {label: "PhoneNumber", type: "text"},
             },
             async authorize(credentials) {
                 try {
-                    const res = await axios.post('http://localhost:8080/user/login', {
-                        name: credentials?.name,
-                        email: credentials?.email,
-                        password: credentials?.password,
-                    });
+
+                    let res;
+
+                    if (credentials?.action == "login") {
+                        res = await axios.post('http://localhost:8080/user/login', {
+                            name: credentials?.name,
+                            email: credentials?.email,
+                            phonenumber: credentials?.phonenumber,
+                        });
+                    }else {
+                        res = await axios.post('http://localhost:8080/user/register', {
+                            name: credentials?.name,
+                            email: credentials?.email,
+                            phonenumber: credentials?.phonenumber,
+                        });
+                    }
+
+                    if (!res || !res.data?.token) {
+                        throw new Error("No token received from server");
+                    }
+
 
                     const token = res.data.token;
 
@@ -71,11 +87,11 @@ export const authOptions = {
             }
 
             console.log('Access token expired');
-            token.accessTextExpires="TokenExpired";
+            token.accessTextExpires = "TokenExpired";
             return token;
         },
         async session({session, token}: { session: Session, token: JWT }) {
-            console.log(token.accessTokenExpires,"********************");
+            console.log(token.accessTokenExpires, "********************");
             console.log(Date.now());
 
             session.accessToken = token.accessToken as string;
