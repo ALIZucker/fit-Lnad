@@ -27,7 +27,8 @@ module.exports = {
                 postBackColor:"#fff7f4",
                 blue50:"#67aae6",
                 bluesky:"#f4faff",
-                footer:"#021526"
+                footer:"#021526",
+                backDash:"#ebf5ff"
             }
         },
     },

@@ -6,6 +6,16 @@ export interface itemsDashboard {
     name: string;
     image: string;
 }
+
+export interface itemspostDashboard {
+    situation: string;
+    dateOrder: string;
+    codeOrder: string;
+    pay: string;
+    offPay: string;
+    images: string[];
+}
+
 export interface dataproduct {
     image: string;
     title: string;
