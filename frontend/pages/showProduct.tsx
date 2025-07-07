@@ -47,7 +47,7 @@ function ShowProduct() {
                     <p className=" text-sm">مرتب سازی بر اساس</p>
                 </section>
             </div>
-            <div className="lg:w-[62vw] h-auto flex flex-col gap-6 px-6 justify-start items-start   ">
+            <div className="lg:w-[62vw]  h-auto flex flex-col gap-6 px-6 justify-start items-start   ">
                 <div
                     className="lg:flex hidden flex-row gap-4 items-center lg:w-[27.7vw]  justify-around font-semibold text text-desktext16 ">
                     <p className={`cursor-pointer hover:text-primary ${filterPopular === 0 ? `underline underline-offset-8  decoration-2 decoration-primary` : null}`}

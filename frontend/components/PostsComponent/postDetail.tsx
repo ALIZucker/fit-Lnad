@@ -14,11 +14,11 @@ interface PostDetailProps {
 
 function PostDetail({image, title, price, vip, off}: PostDetailProps) {
     return (
-        <div className="lg:w-[366px] w-full lg:h-[468px] bg-white flex flex-col justify-start relative rounded-xl">
+        <div className=" lg:w-[23.0915vw] rounded-2xl w-full lg:h-[59.7701vh]  flex flex-col justify-start relative ">
             <img
                 src={image}
                 alt="asdasd"
-                className="w-full rounded-xl object-cover object-center"
+                className="w-full rounded-xl object-cover object-top "
                 width={366} // Required
                 height={280} // Required
             />
@@ -27,7 +27,7 @@ function PostDetail({image, title, price, vip, off}: PostDetailProps) {
                 <p > {price} تومان</p>
                 <p>از سایز L تا XXl</p>
             </div>
-            <div className="flex flex-row gap-2 top-1 left-1 items-center absolute">
+            <div className="flex flex-row gap-2 lg:top-[5vh] top-1 left-1 items-center absolute">
                 {
                     vip ? (
                         <p className="bg-primary text-white text-monile12 lg:text-desktext16 w-10 h-10 rounded-[50%] flex flex-row justify-center items-center">VIP</p>
