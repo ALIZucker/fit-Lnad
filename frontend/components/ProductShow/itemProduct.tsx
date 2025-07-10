@@ -7,7 +7,7 @@ import {dataproduct} from "@/type/next-auth";
 
 function ItemProduct({item}: { item: dataproduct }) {
     return (
-        <div className="lg:w-[21vw] lg:h-[66.05vh] relative  flex flex-col gap-[1.4578vh] rounded-2xl shadow-md hover:shadow-xl">
+        <div className="lg:w-[21vw] lg:h-[66.05vh] h-[60vh] relative  flex flex-col gap-[1.4578vh] rounded-2xl shadow-md hover:shadow-xl">
             <img src={item.image} alt="image" className="rounded-t-xl w-full object-cover lg:h-[43.0108vh]" />
             <div className="flex flex-col gap-3 px-3 ">
                 {
@@ -17,15 +17,15 @@ function ItemProduct({item}: { item: dataproduct }) {
                     </div>) : null
                 }
                 <div className="w-full flex flex-row justify-between gap-3 ">
-                    <h2 className="text-desktext18 font-semibold"> {item.title}</h2>
+                    <h2 className="lg:text-desktext18 text-monile16 font-semibold"> {item.title}</h2>
                     <ReadOnlyRating star={item.star}/>
                 </div>
-                <p className="text-[0.8vw] ">از سایز M تا 3XL</p>
+                <p className="lg:text-[0.8vw] text-monile14  ">از سایز M تا 3XL</p>
                 <div className="flex flex-col gap-[1.8vh] w-full">
-                    <p className="text-sm ">{item.price} تومان</p>
+                    <p className="lg:text-sm  text-monile14">{item.price} تومان</p>
                     {
                         item.offPrice !== null ? (
-                            <p className="text-[0.7vw] text-gray-600 line-through">200.000 تومان</p>
+                            <p className="lg:text-[0.7vw] text-monile12 text-gray-600 line-through">200.000 تومان</p>
                         ):null
                     }
                 </div>

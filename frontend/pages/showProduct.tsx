@@ -61,7 +61,7 @@ function ShowProduct() {
                     <p className={`cursor-pointer hover:text-primary ${filterPopular === 4 ? `underline underline-offset-8  decoration-2 decoration-primary` : null}`}
                        onClick={() => handelunderLinde(4)}>ارزان ترین</p>
                 </div>
-                <section className=" lg:w-[67.5056vw] w-full  flex flex-row lg:gap-[1.708vw] gap-[2.1622vh] bg-blue-300 justify-around lg:justify-start flex-wrap items-center ">
+                <section className=" lg:w-[67.5056vw] w-full  flex flex-row lg:gap-[1.708vw] gap-[2.1622vh]  justify-around lg:justify-start flex-wrap items-center ">
                     {
                         data?.map((item, index) => (
                             <ItemProduct key={index} item={item}/>
