@@ -32,7 +32,7 @@ function ShowProduct() {
 
 
     return (
-        <div className="w-full flex lg:flex-row flex-col  lg:py-[11.50vh] py-[2vh] lg:px-[9.66vw] px-0 gap-6">
+        <div className="w-full flex lg:flex-row flex-col  lg:py-[11.50vh] py-[2vh] lg:px-[5vw] px-0  ">
             <div className="lg:w-[16.11vw]  h-[52vh] hidden  lg:flex flex-col rounded-xl p-4  gap-6"
                  style={{border: "1px solid rgba(0,0,0,.25)"}}>
                 <FilterSilde/>
@@ -49,7 +49,7 @@ function ShowProduct() {
             </div>
             <div className="lg:w-[62vw]  h-auto flex flex-col gap-6 px-6 justify-start items-start   ">
                 <div
-                    className="lg:flex hidden flex-row gap-4 items-center lg:w-[27.7vw]  justify-around font-semibold text text-desktext16 ">
+                    className="lg:flex hidden flex-row gap-4 items-center lg:w-[27.7vw]  justify-around font-semibold text text-desktext18 ">
                     <p className={`cursor-pointer hover:text-primary ${filterPopular === 0 ? `underline underline-offset-8  decoration-2 decoration-primary` : null}`}
                        onClick={() => handelunderLinde(0)}>پربازدیدترین</p>
                     <p className={`cursor-pointer hover:text-primary ${filterPopular === 1 ? `underline underline-offset-8  decoration-2 decoration-primary` : null}`}
@@ -61,7 +61,7 @@ function ShowProduct() {
                     <p className={`cursor-pointer hover:text-primary ${filterPopular === 4 ? `underline underline-offset-8  decoration-2 decoration-primary` : null}`}
                        onClick={() => handelunderLinde(4)}>ارزان ترین</p>
                 </div>
-                <section className=" w-full flex flex-row gap-10 justify-start flex-wrap items-center ">
+                <section className=" lg:w-[67.5056vw] w-full  flex flex-row lg:gap-[1.708vw] gap-[2.1622vh] bg-blue-300 justify-around lg:justify-start flex-wrap items-center ">
                     {
                         data?.map((item, index) => (
                             <ItemProduct key={index} item={item}/>

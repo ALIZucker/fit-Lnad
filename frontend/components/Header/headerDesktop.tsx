@@ -81,66 +81,67 @@ function HeaderDesktop() {
         <>
             <section className="flex flex-row justify-around gap-[10.24vw] ">
                 <Link href={`http://localhost:3000/`}><Image src="/icon/Frame 1430103224.png" alt={`image`} width={150} height={50} /></Link>
-                <section className="relative  w-[33.49vw] py-2 flex flex-col ">
-                    <div className="flex flex-row items-center px-2 py-3 w-full gap-2 bg-gray-100  rounded-xl">
+                <section className="  w-[33.49vw] py-2 flex flex-col ">
+                    <div className="relative flex flex-row items-center px-2 py-3 w-full gap-2 bg-gray-100  rounded-xl">
                         <Image src="/icon/search-normal.png" alt={`image`} width={24} height={24}/>
                         <input placeholder={`جست و جو`} className="bg-transparent text-sm w-full outline-none"
                                onFocus={() => setShowResults(!showResults)}
                                onBlur={() => setShowResults(!showResults)}
                                onChange={(e: ChangeEvent<HTMLInputElement>) => handlerChange(e)}/>
+                        {
+                            showResults ? (<div
+                                className="absolute w-full rounded-xl top-[45px] right-1 p-6 z-10  bg-gray-100 h-auto flex flex-col gap-8 "
+                                style={{borderTop: "2px solid rgba(100,100,100,.4)"}}>
+                                {
+                                    query ? (
+                                        <div className="text-sm flex flex-col gap-6 font-semibold w-full">
+                                            <h3 className="font-semibold">
+                                                همه کالا های مربوط به <span className="text-primary">{query}</span>
+
+                                            </h3>
+                                            <section className="flex flex-col gap-2 items-center">
+                                                <>
+                                                    {
+                                                        reasultList.map((item, index) => (
+                                                            <p key={index}
+                                                               style={{borderBottom: "1px solid rgba(180,180,180,.5)"}}
+                                                               className=" px-3 w-full text-xs  py-2 cursor-pointer">{item}</p>
+                                                        ))
+                                                    }
+                                                </>
+
+
+                                            </section>
+                                        </div>
+                                    ) : (
+                                        <div className="text-sm flex flex-col gap-6 font-semibold w-full">
+                                            <h3 className="font-semibold">
+                                                جستجوهای اخیر
+                                            </h3>
+                                            <section className="flex flex-row gap-3 items-center">
+                                                <p className="bg-gray-200 p-3 text-xs rounded-xl cursor-pointer">هودی</p>
+                                                <p className="bg-gray-200 p-3 text-xs rounded-xl cursor-pointer">کوهنوردی</p>
+                                            </section>
+
+                                        </div>
+                                    )
+                                }
+                                <div className="text-sm flex flex-col gap-6 font-semibold w-full">
+                                    <h3 className="">
+                                        جستجوهای پرطرفدار
+                                    </h3>
+                                    <section className="flex flex-row gap-3 items-center">
+                                        <p className="bg-gray-200 p-3 text-xs rounded-xl cursor-pointer">شیکر بدنسازی</p>
+                                        <p className="bg-gray-200 p-3 text-xs rounded-xl cursor-pointer">کفش کوهنوردی</p>
+                                        <p className="bg-gray-200 p-3 text-xs rounded-xl cursor-pointer">ست ورزشی</p>
+                                        <p className="bg-gray-200 p-3 text-xs rounded-xl cursor-pointer">استوک</p>
+                                    </section>
+
+                                </div>
+                            </div>) : null
+                        }
                     </div>
-                    {
-                        showResults ? (<div
-                            className="absolute w-full rounded-xl top-[5.5vh] p-6 z-10  bg-gray-100 h-auto flex flex-col gap-8 "
-                            style={{borderTop: "2px solid rgba(100,100,100,.4)"}}>
-                            {
-                                query ? (
-                                    <div className="text-sm flex flex-col gap-6 font-semibold w-full">
-                                        <h3 className="font-semibold">
-                                            همه کالا های مربوط به <span className="text-primary">{query}</span>
 
-                                        </h3>
-                                        <section className="flex flex-col gap-2 items-center">
-                                            <>
-                                                {
-                                                    reasultList.map((item, index) => (
-                                                        <p key={index}
-                                                           style={{borderBottom: "1px solid rgba(180,180,180,.5)"}}
-                                                           className=" px-3 w-full text-xs  py-2 cursor-pointer">{item}</p>
-                                                    ))
-                                                }
-                                            </>
-
-
-                                        </section>
-                                    </div>
-                                ) : (
-                                    <div className="text-sm flex flex-col gap-6 font-semibold w-full">
-                                        <h3 className="font-semibold">
-                                            جستجوهای اخیر
-                                        </h3>
-                                        <section className="flex flex-row gap-3 items-center">
-                                            <p className="bg-gray-200 p-3 text-xs rounded-xl cursor-pointer">هودی</p>
-                                            <p className="bg-gray-200 p-3 text-xs rounded-xl cursor-pointer">کوهنوردی</p>
-                                        </section>
-
-                                    </div>
-                                )
-                            }
-                            <div className="text-sm flex flex-col gap-6 font-semibold w-full">
-                                <h3 className="">
-                                    جستجوهای پرطرفدار
-                                </h3>
-                                <section className="flex flex-row gap-3 items-center">
-                                    <p className="bg-gray-200 p-3 text-xs rounded-xl cursor-pointer">شیکر بدنسازی</p>
-                                    <p className="bg-gray-200 p-3 text-xs rounded-xl cursor-pointer">کفش کوهنوردی</p>
-                                    <p className="bg-gray-200 p-3 text-xs rounded-xl cursor-pointer">ست ورزشی</p>
-                                    <p className="bg-gray-200 p-3 text-xs rounded-xl cursor-pointer">استوک</p>
-                                </section>
-
-                            </div>
-                        </div>) : null
-                    }
                 </section>
 
                 <section className="flex flex-row items-center gap-4 ">
@@ -162,7 +163,7 @@ function HeaderDesktop() {
                 </section>
             </section>
 
-            <div className="flex flex-row w-[80%] bg-gray-100 justify-between  rounded-xl py-5"
+            <div className="flex flex-row w-[90.5996vw] bg-gray-100 justify-between  rounded-xl py-5"
                  onMouseLeave={() => setIsHovered(5)}>
                 <ol className="w-[34vw] flex flex-row justify-around font-semibold text-[14px]">
                     <i className="cursor-pointer " onMouseEnter={() => setIsHovered(0)}><Link
