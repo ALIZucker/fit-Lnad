@@ -40,18 +40,18 @@ function DashboardLanding() {
         <>
 
             <div
-                className={selected !== null ? `hidden lg:flex lg:px-[10.5vw] w-full   flex-row gap-[2vw] py-8 px-4` : `lg:px-[10.5vw] w-full   flex-row gap-[2vw] py-8 px-4`}>
+                className={selected !== null ? `hidden lg:flex lg:px-[6.5vw] w-full  lg:justify-evenly    flex-row gap-[2vw] py-8 px-4` : `lg:px-[6.5vw] w-full h   flex-row gap-[2vw] py-8 px-4`}>
 
                 <div
-                    className="lg:w-[15.2vw] w-full  lg:bg-[#fff8f5] px-[1.67vw] flex flex-col gap-[5vh] rounded-xl lg:shadow   py-[5.02vh] h-[73.84vh] "
+                    className="lg:w-[18.1703vw] w-full  lg:bg-[#fff8f5] px-[1.67vw] flex flex-col gap-[5vh] rounded-xl lg:shadow   py-[6.02vh] h-[91vh] "
                 >
                     <section className=" flex items-center lg:flex-col flex-row  gap-6 w-full relative">
                         <Image src={img} alt={`image`}
-                               className="lg:w-[5.24vw] lg:h-[10.46vh] w-[9.6vw] h-[4.46vh] object-cover"/>
-                        <Image src={img2} alt={`image`} className="top-[6.7vh] right-[3vw] absolute hidden lg:block"/>
-                        <div className="flex-col flex gap-2">
-                            <p className="text-xs">مهسا شیرین زبان</p>
-                            <p className="text-xs">mahsashirinzaban751@gmail.com</p>
+                               className="lg:w-[6.2vw] lg:h-[12.662vh] w-[9.6vw] h-[4.46vh] object-cover"/>
+                        <Image src={img2} alt={`image`} className="top-[8.6845vh] lg:h-[3.0651vh] lg:w-[1.5142vw] right-[4.7vw] absolute hidden lg:block"/>
+                        <div className="flex-col flex w-full font-semibold items-center gap-2">
+                            <p className="lg:text-desktext18">مهسا شیرین زبان</p>
+                            <p className="lg:text-desktext16">mahsashirinzaban751@gmail.com</p>
                         </div>
 
                     </section>
@@ -59,7 +59,7 @@ function DashboardLanding() {
                         {
                             dataDashboard.map((data, index) => (
                                 <div key={index}
-                                     className={`flex cursor-pointer flex-row gap-2 items-center box-border py-4   ${selected === index ? 'border-b-2 border-b-black' : null} `}
+                                     className={`flex cursor-pointer flex-row gap-2 items-center box-border py-[3.06vh]   ${selected === index ? 'border-b-2 border-b-black' : null} `}
                                      onClick={() => setSelected(index)}>
                                     <Image src={data.image} alt={`image`} width={20} height={20}/>
                                     <p className="lg:text-desktext16 text-monile12">{data.name}</p>

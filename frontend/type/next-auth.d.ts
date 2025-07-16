@@ -8,6 +8,7 @@ export interface itemsDashboard {
 }
 
 export interface itemspostDashboard {
+    post: any;
     situation: string;
     dateOrder: string;
     codeOrder: string;
