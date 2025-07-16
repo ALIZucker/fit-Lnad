@@ -37,7 +37,7 @@ function Register({ setValue }: registerProps) {
     return (
         <div className="lg:w-[23.93vw] w-[85%] lg:h-[65.37vh] h-[65.37vh]  flex flex-col  bg-white z-10 p-8 rounded-xl  gap-8"
              style={{border: "1px solid rgba(0,0,0,.2)"}}>
-            <h2 className="lg:text-desktext28 font-semibold text-sm">ثبت نام</h2>
+            <h2 className="lg:text-desktext28 font-semibold  text-sm ">ثبت نام</h2>
             <BoxInput title="نام و نام خانوادگی" setInput={setName} />
             <BoxInput title="شماره تلفن همراه" setInput={setPhoneNumber} />
             <BoxInput title="ایمیل (اختیاری)" setInput={setEmail} />
