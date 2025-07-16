@@ -48,10 +48,10 @@ function Takhfif({color,url}: PropsTakhfif) {
     };
 
     return (
-        <div className={`flex lg:mt-[8.36vh] mt-2 flex-col items-center w-full gap-2 ${color} lg:h-[59.83vh] h-[49vh]`}>
+        <div className={`flex lg:mt-[8.36vh] mt-2 flex-col items-center w-full gap-2 ${color} lg:h-[62.7615vh] h-[49vh]`}>
             <h2 className="lg:text-desktext32 text-monile12 font-extrabold bg-white py-2 px-5 rounded-xl">تخفیفات ویژه</h2>
 
-            <Carousel className="w-full py-8 lg:px-10 "
+            <Carousel className="w-full py-8 lg:px-10 flex flex-row gap-[1vw] "
                       responsive={responsive}
                       infinite
                       autoPlay

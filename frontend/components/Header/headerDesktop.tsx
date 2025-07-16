@@ -81,7 +81,7 @@ function HeaderDesktop() {
         <>
             <section className="flex flex-row justify-around gap-[10.24vw] ">
                 <Link href={`http://localhost:3000/`}><Image src="/icon/Frame 1430103224.png" alt={`image`} width={150} height={50} /></Link>
-                <section className="  w-[33.49vw] py-2 flex flex-col ">
+                <section className=" w-[33.49vw] py-2 flex flex-col ">
                     <div className="relative flex flex-row items-center px-2 py-3 w-full gap-2 bg-gray-100  rounded-xl">
                         <Image src="/icon/search-normal.png" alt={`image`} width={24} height={24}/>
                         <input placeholder={`جست و جو`} className="bg-transparent text-sm w-full outline-none"
@@ -90,8 +90,7 @@ function HeaderDesktop() {
                                onChange={(e: ChangeEvent<HTMLInputElement>) => handlerChange(e)}/>
                         {
                             showResults ? (<div
-                                className="absolute w-full rounded-xl top-[45px] right-1 p-6 z-10  bg-gray-100 h-auto flex flex-col gap-8 "
-                                style={{borderTop: "2px solid rgba(100,100,100,.4)"}}>
+                                className="absolute w-full  top-[45px] rounded-b-lg left-0 p-6 z-10  bg-gray-100 h-auto flex flex-col gap-8 ">
                                 {
                                     query ? (
                                         <div className="text-sm flex flex-col gap-6 font-semibold w-full">
@@ -186,7 +185,7 @@ function HeaderDesktop() {
 
                 </ol>
                 <div
-                    className={`${isHovered == 5 ? "hidden" : " "} absolute w-[80%] h-auto top-[99%] gap-[6.2vw] rounded-xl flex flex-row justify-around flex-wrap z-10    bg-gray-200 px-[2.75vw] py-[4.18vh]  `}>
+                    className={`${isHovered == 5 ? "hidden" : " "} absolute w-[90.5996vw] h-auto top-[99%] gap-[6.2vw] rounded-xl flex flex-row justify-around flex-wrap z-10    bg-gray-200 px-[2.75vw] py-[4.18vh]  `}>
                     {
 
                         itemsMenu ? itemsMenu[0].subset.map((item, index) => (
