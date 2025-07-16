@@ -12,7 +12,6 @@ function Page() {
      <div>
          <HeaderAll/>
          <DashboardLanding/>
-         <Footer/>
      </div>
     );
 }

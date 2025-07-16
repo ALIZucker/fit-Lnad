@@ -11,13 +11,13 @@ function DropFilter({children, text}: { children: React.ReactNode, text: string 
     return (
         <div className="w-full">
             <button
-                className="w-full flex flex-row-reverse justify-between text-left py-2 px-3 shadow  rounded "
+                className="w-full flex flex-row-reverse justify-between text-left py-[0.5vh] px-3 shadow  rounded "
                 style={{borderBottom: "1px solid white"}}
                 onClick={() => toggleDropdown('menu1')}
             >
                 <Image src={img} alt={`image`}
                        className={`transition-transform ${openMenu === 'menu1' ? 'rotate-180' : 'rotate-0'}`}/>
-                <p className="font-bold text-[14px]">{text}</p>
+                <p className="font-bold lg:text-desktext16">{text}</p>
             </button>
             {openMenu === 'menu1' && (
                 <>

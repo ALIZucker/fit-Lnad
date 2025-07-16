@@ -8,7 +8,7 @@ import {itemspostDashboard} from "@/type/next-auth"
 function HisrysOfBuy() {
     const [selected, setSelected] = React.useState<number >(1)
     const [data, setData] = React.useState<itemspostDashboard[] | null>(null)
-    const [result, setResult] = React.useState<itemspostDashboard[] >([])
+    const [result, setResult] = React.useState<itemspostDashboard[] |undefined>([])
 
     React.useEffect(() => {
         const fetchData = async () => {
@@ -26,11 +26,10 @@ function HisrysOfBuy() {
     }, [])
 
     React.useEffect(() => {
-        console.log(data)
-        const result = data?.filter(item => item.situation === selected.toString());
 
-        console.log(result)
+        const result = data?.filter(item => item.post.situation === selected.toString());
 
+        setResult(result)
 
 
     }, [selected])
@@ -43,27 +42,19 @@ function HisrysOfBuy() {
                 <div className="flex flex-row text-desktext16 w-full gap-9 items-center justify-start p-6"
                      style={{borderBottom: "0.12vw solid rgba(138, 138, 138, 0.5)"}}>
                     <p className={selected == 1 ? `bg-backDash rounded-xl font-semibold text-green-800 px-2 py-1 ` : `px-2 py-1 cursor-pointer`}
-                       onClick={() => setSelected(1)}>جاری ۱</p>
+                       onClick={() => setSelected(1)}>جاری  {result?.length}</p>
                     <p className={selected == 2 ? `bg-backDash rounded-xl font-semibold text-green-800 px-2 py-1 ` : `px-2 py-1 cursor-pointer`}
-                       onClick={() => setSelected(2)}>تحویل شده 8</p>
+                       onClick={() => setSelected(2)}>تحویل شده {result?.length}</p>
                     <p className={selected == 3 ? `bg-backDash rounded-xl font-semibold text-green-800 px-2 py-1 ` : `px-2 py-1 cursor-pointer`}
-                       onClick={() => setSelected(3)}> مرجوع شده 2</p>
+                       onClick={() => setSelected(3)}> مرجوع شده {result?.length}</p>
                     <p className={selected == 4 ? `bg-backDash rounded-xl font-semibold text-green-800 px-2 py-1 ` : `px-2 py-1 cursor-pointer`}
-                       onClick={() => setSelected(4)}>لغو شده 8</p>
+                       onClick={() => setSelected(4)}>لغو شده {result?.length}</p>
                 </div>
                 <div className="flex flex-col items-center gap-6 w-full  p-6">
                     {
-                        result.length == 0 ? <p>asdasd</p> : (
-                           <>
-
-                           {
-                               result.map((item) => (
-                                   <TemplateOrder items={item}/>
-                               ))
-                           }
-
-                           </>
-                       )
+                        result?.length == 0 ? <p>سفارش یافت نشد !!</p> : (<>
+                        <p>asdasdasdasdasdasd</p>
+                        </>)
                     }
 
 

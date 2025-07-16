@@ -33,14 +33,17 @@ function ShowProduct() {
 
     return (
         <div className="w-full flex lg:flex-row flex-col  lg:py-[11.50vh] py-[2vh] lg:px-[5vw] px-0  ">
-            <div className="lg:w-[16.11vw]  h-[52vh] hidden  lg:flex flex-col rounded-xl p-4  gap-6"
-                 style={{border: "1px solid rgba(0,0,0,.25)"}}>
-                <FilterSilde/>
+            <div>
+                <section className="lg:w-[17.11vw] h-auto  hidden  lg:flex flex-col rounded-xl p-4  gap-[3.0651vh]"
+                     style={{border: "1px solid rgba(0,0,0,.25)"}}>
+                    <FilterSilde/>
+                </section>
             </div>
+
             <div className="lg:hidden flex flex-row w-full gap-4 justify-between items-center">
                 <section className="flex  py-3 px-4 flex-row w-[48%] items-center gap-3">
-                    <Image src="/icon/setting-4.png" alt={`image`} width={24} height={24} />
-                    <p className=" text-sm">فیلترها</p>
+                <Image src="/icon/setting-4.png" alt={`image`} width={24} height={24} />
+                    <p className=" lg:text-desktext20">فیلترها</p>
                 </section>
                 <section className="flex  py-3 px-4 flex-row w-[48%] items-center gap-2">
                     <Image src="/icon/sort.png" alt={`image`} width={24} height={24} />
