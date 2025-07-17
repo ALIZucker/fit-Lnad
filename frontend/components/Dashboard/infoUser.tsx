@@ -46,47 +46,47 @@ function InfoUser() {
                 style={{border: "1px solid rgba(190,190,190,.5)"}}>
 
                 <div className="relative w-full lg:w-[22.04vw] h-[6.06vh]  py-3">
-                    <p className=" bg-white absolute lg:top-0 top-1.5 right-[1.4vw] px-2 lg:text-sm  text-mobtext10">{account[0].name}</p>
+                    <p className=" bg-white absolute lg:top-0 top-1.5 right-[1.4vw] px-2 lg:text-desktext16  text-mobtext10">{account[0].name}</p>
                     <input type="text" value={name} style={{border: "2px solid rgba(220,220,220,.8)"}}
                            onChange={(e) => {
                                setName(e.target.value)
                            }}
-                           className="rounded-xl lg:py-2 py-3 px-2 w-full outline-0 lg:text-desktext16 text-mobtext10"/>
+                           className="rounded-xl lg:py-[0.8368vh] py-3 px-2 w-full outline-0 lg:text-desktext14 text-mobtext10"/>
                 </div>
                 <div className="relative  w-full lg:w-[22.04vw] h-[6.06vh]  py-3">
-                    <p className=" bg-white absolute lg:top-0 top-1.5 right-[1.4vw] px-2 lg:text-sm  text-mobtext10 ">{account[1].name}</p>
+                    <p className=" bg-white absolute lg:top-0 top-1.5 right-[1.4vw] px-2 lg:text-desktext16  text-mobtext10 ">{account[1].name}</p>
                     <input type="text" value={code} style={{border: "2px solid rgba(220,220,220,.8)"}}
                            onChange={(e) => {
                                setCode(e.target.value)
                            }}
-                           className="rounded-xl lg:py-2 py-3 px-2 w-full outline-0 lg:text-desktext16 text-mobtext10"/>
+                           className="rounded-xl lg:py-[0.8368vh] py-3 px-2 w-full outline-0 lg:text-desktext14 text-mobtext10"/>
                 </div>
                 <div className="relative  w-full lg:w-[22.04vw] h-[6.06vh]  py-3">
-                    <p className=" bg-white absolute lg:top-0 top-1.5 right-[1.4vw] px-2 lg:text-sm  text-mobtext10 ">{account[2].name}</p>
+                    <p className=" bg-white absolute lg:top-0 top-1.5 right-[1.4vw] px-2 lg:text-desktext16  text-mobtext10 ">{account[2].name}</p>
                     <input type="text" value={email} style={{border: "2px solid rgba(220,220,220,.8)"}}
                            onChange={(e) => {
                                setEmail(e.target.value)
                            }}
-                           className="rounded-xl lg:py-2 py-3 px-2 w-full outline-0 lg:text-desktext16 text-mobtext10"/>
+                           className="rounded-xl lg:py-[0.8368vh] py-3 px-2 w-full outline-0 lg:text-desktext14 text-mobtext10"/>
                 </div>
                 <div className="relative  w-full lg:w-[22.04vw] h-[6.06vh]  py-3">
-                    <p className=" bg-white absolute lg:top-0 top-1.5 right-[1.4vw] px-2 lg:text-sm  text-mobtext10 ">{account[3].name}</p>
+                    <p className=" bg-white absolute lg:top-0 top-1.5 right-[1.4vw] px-2 lg:text-desktext16  text-mobtext10 ">{account[3].name}</p>
                     <input type="text" value={shomare} style={{border: "2px solid rgba(220,220,220,.8)"}}
                            onChange={(e) => {
                                setShomare(e.target.value)
                            }}
-                           className="rounded-xl lg:py-2 py-3 px-2 w-full outline-0 lg:text-desktext16 text-mobtext10"/>
+                           className="rounded-xl lg:py-[0.8368vh] py-3 px-2 w-full outline-0 lg:text-desktext14 text-mobtext10"/>
                 </div>
                 <div className="relative  w-full lg:w-[22.04vw] h-[6.06vh]  py-3">
-                    <p className=" bg-white absolute lg:top-0 top-1.5 right-[1.4vw] px-2 lg:text-sm  text-mobtext10 ">{account[4].name}</p>
+                    <p className=" bg-white absolute lg:top-0 top-1.5 right-[1.4vw] px-2 lg:text-desktext16  text-mobtext10 ">{account[4].name}</p>
                     <input type="text" value={gener} style={{border: "2px solid rgba(220,220,220,.8)"}}
                            onChange={(e) => {
                                setGener(e.target.value)
                            }}
-                           className="rounded-xl lg:py-2 py-3 px-2 w-full outline-0 lg:text-desktext16 text-mobtext10"/>
+                           className="rounded-xl lg:py-[0.8368vh] py-3 px-2 w-full outline-0 lg:text-desktext14 text-mobtext10"/>
                 </div>
                 <button onClick={handlSetValue}
-                        className=" lg:w-[22.04vw] w-full py-2 mt-3 font-semibold  rounded-xl  bg-primary  text-white">تایید
+                        className=" lg:w-[22.04vw] w-full py-[0.8368vh] mt-3 font-semibold  rounded-xl lg:text-desktext16  bg-primary  text-white">تایید
                 </button>
 
 
