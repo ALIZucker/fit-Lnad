@@ -10,6 +10,7 @@ module.exports = {
                 mobtext10: "2.41vw",
                 desktext24: "1.25vw",
                 desktext16: "0.83vw",
+                desktext14: "0.7349vw",
                 desktext32: "1.67vw",
                 desktext18: "0.9449vw",
                 desktext20: "1.04vw",
@@ -28,7 +29,8 @@ module.exports = {
                 blue50:"#67aae6",
                 bluesky:"#f4faff",
                 footer:"#021526",
-                backDash:"#ebf5ff"
+                backDash:"#eff7f6",
+                doshBacked:'#fffde6'
             }
         },
     },
