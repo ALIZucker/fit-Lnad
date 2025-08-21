@@ -21,8 +21,6 @@ function LoginEnter({setValue}:LoginEnterp) {
             redirect: true,
             callbackUrl: '/',
         });
-
-        console.log(result);
     };
 
 

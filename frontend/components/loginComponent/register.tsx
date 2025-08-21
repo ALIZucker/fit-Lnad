@@ -24,8 +24,6 @@ function Register({ setValue }: registerProps) {
             redirect: true,
             callbackUrl: '/',
         });
-
-        console.log(result);
     };
 
 
