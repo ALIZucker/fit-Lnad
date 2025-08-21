@@ -1,6 +1,9 @@
 // types/next-auth.d.ts
 import NextAuth from 'next-auth';
 
+
+
+
 export interface itemsDashboard {
     id: number;
     name: string;

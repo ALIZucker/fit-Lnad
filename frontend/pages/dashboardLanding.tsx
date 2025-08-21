@@ -17,6 +17,7 @@ import {data} from "autoprefixer";
 import InfoUser from "@/components/Dashboard/infoUser";
 import ExitUser from "@/components/Dashboard/exitUser";
 import HisrysOfBuy from "@/components/Dashboard/hisrysOfBuy";
+import InterstedUser from "@/components/Dashboard/interstedUser";
 
 const dataDashboard: itemsDashboard[] = [
     {id: 0, name: "حساب کاربری", image: pic.src},
@@ -78,6 +79,8 @@ function DashboardLanding() {
                  ">
                     {selected === 0 ? (<InfoUser/>) : null}
                     {selected === 1 ? (<HisrysOfBuy/>) : null}
+                    {selected === 2 ? (<InterstedUser/>) : null}
+
                 </div>
 
             </div>

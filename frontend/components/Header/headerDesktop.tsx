@@ -30,7 +30,6 @@ function HeaderDesktop() {
         const items = menuData[isHovered]
         setItemsMenu(items ? [items] : undefined)
 
-        console.log(items?.title)
         switch (items?.title) {
             case "مردانه":
                 setImage(man.src)
