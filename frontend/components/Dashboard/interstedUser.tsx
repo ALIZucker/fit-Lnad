@@ -25,10 +25,6 @@ function InterstedUser() {
         }
 
     }, [])
-    React.useEffect(() => {
-        console.log(dataInterested);
-
-    }, [dataInterested])
 
     return (
         <div className="flex flex-col gap-6 ">

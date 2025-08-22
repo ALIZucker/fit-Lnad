@@ -22,7 +22,7 @@ function HeaderDesktop() {
     const [isHovered, setIsHovered] = React.useState<number>(5);
     const router = useRouter();
     const {data: session, status} = useSession();
-    console.log(session);
+
 
 
     React.useEffect(() => {

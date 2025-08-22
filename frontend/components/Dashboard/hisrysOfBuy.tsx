@@ -20,7 +20,7 @@ function HisrysOfBuy() {
         const fetchData = async () => {
             try {
                 const respont = await axios.get('http://127.0.0.1:8080/mypost/show')
-                console.log(respont.data.massage)
+
                 setData(respont.data.massage)
 
             } catch (error) {
@@ -62,7 +62,7 @@ function HisrysOfBuy() {
     React.useEffect(() => {
 
         const result = data?.filter(item => item.post.situation === selected.toString());
-        console.log(result)
+
         setResult(result)
 
 
