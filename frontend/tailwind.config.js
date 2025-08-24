@@ -30,7 +30,8 @@ module.exports = {
                 bluesky:"#f4faff",
                 footer:"#021526",
                 backDash:"#eff7f6",
-                doshBacked:'#fffde6'
+                doshBacked:'#fffde6',
+                detailBack:'#ededed'
             }
         },
     },
