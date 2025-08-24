@@ -29,7 +29,6 @@ router.get('/show',(req,res)=>{
 
     usePost.find({})
         .then(posts => {
-            console.log(posts)
             res.json({massage:posts })
         })
         .catch(err => {

@@ -10,7 +10,6 @@ const blacklist = []
 
 router.post('/register', async (req, res) => {
     const {name, email, phonenumber} = req.body;
-    console.log(name, email, phonenumber);
     console.log("**********************");
     const newUser = new userModel({
         name,
@@ -21,7 +20,7 @@ router.post('/register', async (req, res) => {
         console.log(user.name);
     }).catch(err => {
         newUser.save().then(() => {
-            console.log("saved")
+
             const token = jwt.sign({email, role: "user", name}, secretKey, {expiresIn: '1h'});
             return res.json({token});
         }).catch(err => {
